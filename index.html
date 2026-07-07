@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+      <source src="music/Vietsub __ Hóa Phàm - Dương Tử Hi (OST Tiên Nghịch).mp3" type="audio/mpeg">
+    </audio>
+    
     <!-- Background Elements -->
     <div class="stars-container" id="starsContainer"></div>
     <div class="sun-rays" id="sunRays"></div>
@@ -70,6 +75,9 @@
           <button class="theme-toggle-btn ms-3" id="themeToggle" title="Toggle Theme">
                        <i class="fas fa-sun sun-icon"></i>
             <i class="fas fa-moon moon-icon"></i>
+          </button>
+          <button class="music-toggle-btn ms-2" id="musicToggle" title="Play/Pause Music">
+            <i class="fas fa-music music-icon"></i>
           </button>
         </div>
       </div>

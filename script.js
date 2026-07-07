@@ -33,6 +33,27 @@ themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
 });
 
+// Music Player
+const musicToggle = document.getElementById("musicToggle");
+const bgMusic = document.getElementById("bgMusic");
+const musicIcon = musicToggle.querySelector(".music-icon");
+let isPlaying = false;
+
+musicToggle.addEventListener("click", () => {
+  if (isPlaying) {
+    bgMusic.pause();
+    musicToggle.classList.remove("playing");
+    musicIcon.classList.remove("fa-pause");
+    musicIcon.classList.add("fa-music");
+  } else {
+    bgMusic.play();
+    musicToggle.classList.add("playing");
+    musicIcon.classList.remove("fa-music");
+    musicIcon.classList.add("fa-pause");
+  }
+  isPlaying = !isPlaying;
+});
+
 // Contact Modal
 const floatingBtn = document.getElementById("floatingContactBtn");
 const contactModal = document.getElementById("contactModal");
